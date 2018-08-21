@@ -1,1 +1,14 @@
-""
+,name,salary,date,file_name
+0,Keith,9000,01/09/2018,./input/file3.csv
+1,Max,8000,02/09/2018,./input/file3.csv
+2,Chris,7000,03/09/2018,./input/file3.csv
+3,Giles,6000,04/09/2018,./input/file3.csv
+4,John,5000,05/09/2018,./input/file3.csv
+5,Mary,4000,06/09/2018,./input/file3.csv
+6,Tom,1000,2018-09-01 00:00:00,./input/file1.xlsx
+7,Jerry,2000,2018-09-02 00:00:00,./input/file1.xlsx
+8,Julina,3000,2018-09-03 00:00:00,./input/file1.xlsx
+9,Kory,4000,2018-09-04 00:00:00,./input/file1.xlsx
+10,Delphine,5000,2018-09-05 00:00:00,./input/file1.xlsx
+11,Keith,15000,01/09/2018,./input/file2.csv
+12,Max,8000,02/09/2018,./input/file2.csv
