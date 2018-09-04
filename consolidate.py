@@ -9,9 +9,7 @@ import pandas as pd
 import os
 import xlrd
 
-
-
-
+#location finder looks for the all files under 'search_dir'. Return all files list.
 def location_finder(search_dir):
     found = []
     for root, dirs, files in os.walk(search_dir):
@@ -21,6 +19,7 @@ def location_finder(search_dir):
             found.append(os.path.join(root, dirname))
     return found
 
+#a_joiner open all excels and csv files and consolidate them into one pandas data frame.
 def a_joiner(t_dir):
     all_data = pd.DataFrame()
     found = location_finder(t_dir)
@@ -29,7 +28,9 @@ def a_joiner(t_dir):
     for f in found:
 
         try:
+            #if filename includes 'xls', we use read_excel. 
             if 'xls' in str(f):
+                #get schema when the iteration is first one.
             	if i == 0:
             		d=pd.read_excel(f,quotechar='"')
             		columns_name=d.columns
@@ -37,8 +38,9 @@ def a_joiner(t_dir):
                 df2=df.assign(file_name=str(f))
                 all_data = pd.concat([all_data,df2])
                 i += 1
-
+            #if filename includes 'csv', we use read_excel.
             elif 'csv' in str(f):
+                #get schema when the iteration is first one
             	if i == 0:
             		d=pd.read_csv(f,quotechar='"')
             		columns_name=d.columns
